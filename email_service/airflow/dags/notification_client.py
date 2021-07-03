@@ -46,7 +46,7 @@ class NotificationClient:
         try:
             self.logger.info("Initiating Email Send")
             SendEmail().smtp_email_trigger(layer_threshold_result,\
-                self.email, self.layer, self.dag_id)
+                self.email, self.layer, self.dag_id, self.frequency)
         except Exception:
             raise
 
